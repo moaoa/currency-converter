@@ -1,0 +1,1 @@
+GET "https://fixer-fixer-currency-v1.p.rapidapi.com/latest"
