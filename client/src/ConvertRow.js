@@ -1,10 +1,17 @@
 import React from 'react'
 import './ConvertRow.css'
 export default function ConvertRow(props) {
-    const { selectedCurrency, currencyOptions } = props
+    const {
+        selectedCurrency,
+        currencyOptions,
+        onInput,
+        onCurrencyChange,
+        amount
+    } = props
     return (
         <div>
-            <select value={selectedCurrency}>
+            <input value={amount} onChange={onInput}></input>
+            <select value={selectedCurrency} onChange={onCurrencyChange}>
                 {currencyOptions.map((currency, i) => (
                     <option key={i} value={currency}>
                         {currency}
